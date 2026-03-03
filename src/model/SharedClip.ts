@@ -1,4 +1,4 @@
-import { Schema, Document, ObjectId } from 'mongoose';
+import mongoose, { Schema, Document, ObjectId } from 'mongoose';
 
 export interface SharedClip extends Document {
     clip_id: ObjectId;
@@ -13,3 +13,7 @@ export const SharedClipSchema : Schema<SharedClip> = new Schema({
     public_token: { type: String, required: true, unique: true },
     video_url: { type: String, required: true },
 },{ timestamps: true });
+
+const sharedClipModel = (mongoose.models.SharedClip as mongoose.Model<SharedClip>) || mongoose.model<SharedClip>('SharedClip', SharedClipSchema);
+
+export default sharedClipModel;

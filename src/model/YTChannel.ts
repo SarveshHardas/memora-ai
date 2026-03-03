@@ -1,4 +1,4 @@
-import { Schema, Document, ObjectId } from 'mongoose';
+import mongoose, { Schema, Document, ObjectId } from 'mongoose';
 
 export interface YTChannel extends Document {
     user_id: ObjectId;
@@ -17,3 +17,7 @@ export const YTChannelSchema : Schema<YTChannel> = new Schema({
     access_token: { type: String, required: true },
     refresh_token: { type: String, required: true },
 },{ timestamps: true });
+
+const YTChannelModel = (mongoose.models.YTChannel as mongoose.Model<YTChannel>) || mongoose.model<YTChannel>('YTChannel', YTChannelSchema);
+
+export default YTChannelModel;

@@ -1,4 +1,4 @@
-import { Schema, Document } from 'mongoose';
+import mongoose, { Schema, Document } from 'mongoose';
 
 export interface Video extends Document {
     channel_id: string;
@@ -17,3 +17,7 @@ export const VideoSchema : Schema<Video> = new Schema({
     duration: { type: Number, required: true },
     status: { type: String, enum: ['ingested', 'transcribing', 'indexed', 'failed'], default: 'ingested' }
 },{ timestamps: true });
+
+const VideoModel = (mongoose.models.Video as mongoose.Model<Video>) || mongoose.model<Video>('Video', VideoSchema);
+
+export default VideoModel;

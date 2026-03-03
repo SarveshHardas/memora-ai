@@ -1,4 +1,4 @@
-import { Schema, Document, ObjectId } from 'mongoose';
+import mongoose, { Schema, Document, ObjectId } from 'mongoose';
 
 export interface Transcript extends Document {
     video_id: ObjectId;
@@ -17,3 +17,7 @@ export const TranscriptSchema : Schema<Transcript> = new Schema({
     text: { type: String, required: true },
     embedding_id: { type: String, required: true }
 },{ timestamps: true });
+
+const TranscriptModel = (mongoose.models.Transcript as mongoose.Model<Transcript>) || mongoose.model<Transcript>('Transcript', TranscriptSchema);
+
+export default TranscriptModel;

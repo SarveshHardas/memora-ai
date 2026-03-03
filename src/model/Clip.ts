@@ -1,4 +1,4 @@
-import { Schema, Document, ObjectId } from 'mongoose';
+import mongoose, { Schema, Document, ObjectId } from 'mongoose';
 
 export interface Clip extends Document {
     video_id: ObjectId;
@@ -17,3 +17,7 @@ export const ClipSchema : Schema<Clip> = new Schema({
     video_url: { type: String, required: true },
     status: { type: String, enum: ['generating', 'ready', 'failed'], default: 'generating' }
 },{ timestamps: true });
+
+const clipModel = (mongoose.models.Clip as mongoose.Model<Clip>) || mongoose.model<Clip>('Clip', ClipSchema);
+
+export default clipModel;
