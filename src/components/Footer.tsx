@@ -8,7 +8,6 @@ const Footer = () => {
     <footer className="border-t border-[var(--border-color)]">
       <div className="max-w-6xl mx-auto px-6 pt-16 pb-8">
         <div className="grid grid-cols-2 md:grid-cols-5 gap-8 mb-12">
-          {/* Brand */}
           <div className="col-span-2 md:col-span-1">
             <div className="flex items-center gap-2 mb-4">
               <div className="w-7 h-7 rounded-lg flex items-center justify-center"
@@ -36,7 +35,6 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Link Columns */}
           {footerLinks.map((col, i) => (
             <div key={i}>
               <h4 className="text-sm font-semibold mb-4">{col.title}</h4>
@@ -53,7 +51,6 @@ const Footer = () => {
           ))}
         </div>
 
-        {/* Bottom */}
         <div className="border-t border-[var(--border-color)] pt-6 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-sm text-[var(--muted)]">
             © {new Date().getFullYear()} Memora AI. All rights reserved.

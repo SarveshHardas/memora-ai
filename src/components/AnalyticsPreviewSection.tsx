@@ -19,9 +19,7 @@ const AnalyticsPreviewSection = () => {
           </p>
         </div>
 
-        {/* Mock Dashboard */}
         <div className="card !p-0 overflow-hidden reveal">
-          {/* Dashboard Header */}
           <div className="flex items-center justify-between px-6 py-4 border-b border-[var(--border-color)]">
             <div className="flex items-center gap-3">
               <div className="w-3 h-3 rounded-full bg-red-400" />
@@ -33,7 +31,6 @@ const AnalyticsPreviewSection = () => {
           </div>
 
           <div className="p-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 border-b border-[var(--border-color)]">
-            {/* Stat Cards */}
             {stats.map((stat, i) => (
               <div key={i} className="bg-[var(--surface-hover)] rounded-xl p-4">
                 <div className="text-sm text-[var(--muted)] mb-1">{stat.label}</div>
@@ -46,16 +43,13 @@ const AnalyticsPreviewSection = () => {
           </div>
 
           <div className="p-6 grid grid-cols-1 lg:grid-cols-3 gap-6">
-            {/* Line Graph */}
             <div className="lg:col-span-2 bg-[var(--surface-hover)] rounded-xl p-5">
               <div className="text-sm font-medium mb-4">Engagement Over Time</div>
               <div className="relative h-48">
                 <svg viewBox="0 0 500 180" className="w-full h-full" preserveAspectRatio="none">
-                  {/* Grid Lines */}
                   {[0, 1, 2, 3, 4].map((i) => (
                     <line key={i} x1="0" y1={i * 45} x2="500" y2={i * 45} stroke="var(--border-color)" strokeWidth="1" />
                   ))}
-                  {/* Area */}
                   <defs>
                     <linearGradient id="areaGrad" x1="0" y1="0" x2="0" y2="1">
                       <stop offset="0%" stopColor="var(--primary)" stopOpacity="0.3" />
@@ -66,7 +60,6 @@ const AnalyticsPreviewSection = () => {
                     d="M0,140 C40,130 80,120 120,100 C160,80 200,90 240,60 C280,30 320,40 360,25 C400,10 440,30 500,15 L500,180 L0,180 Z"
                     fill="url(#areaGrad)"
                   />
-                  {/* Line */}
                   <path
                     d="M0,140 C40,130 80,120 120,100 C160,80 200,90 240,60 C280,30 320,40 360,25 C400,10 440,30 500,15"
                     fill="none"
@@ -74,14 +67,12 @@ const AnalyticsPreviewSection = () => {
                     strokeWidth="2.5"
                     strokeLinecap="round"
                   />
-                  {/* Data Points */}
                   {[
                     [0, 140], [120, 100], [240, 60], [360, 25], [500, 15],
                   ].map(([cx, cy], i) => (
                     <circle key={i} cx={cx} cy={cy} r="4" fill="var(--primary)" stroke="var(--surface)" strokeWidth="2" />
                   ))}
                 </svg>
-                {/* Y-Axis Labels */}
                 <div className="absolute left-0 top-0 h-full flex flex-col justify-between text-[10px] text-[var(--muted)] -translate-x-6">
                   <span>100K</span><span>75K</span><span>50K</span><span>25K</span><span>0</span>
                 </div>
@@ -91,9 +82,7 @@ const AnalyticsPreviewSection = () => {
               </div>
             </div>
 
-            {/* Right Column */}
             <div className="space-y-4">
-              {/* Engagement Heatmap */}
               <div className="bg-[var(--surface-hover)] rounded-xl p-5">
                 <div className="text-sm font-medium mb-4">Engagement Heatmap</div>
                 <div className="grid grid-cols-7 gap-1.5">
@@ -113,7 +102,6 @@ const AnalyticsPreviewSection = () => {
                 </div>
               </div>
 
-              {/* Retention Curve */}
               <div className="bg-[var(--surface-hover)] rounded-xl p-5">
                 <div className="text-sm font-medium mb-4">Retention Curve</div>
                 <div className="h-20">

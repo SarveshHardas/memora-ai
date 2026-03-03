@@ -25,7 +25,6 @@ const TestimonialsSection = () => {
               key={i}
               className={`card reveal reveal-delay-${i + 1}`}
             >
-              {/* Stars */}
               <div className="flex gap-1 mb-4">
                 {[...Array(5)].map((_, j) => (
                   <svg key={j} width="16" height="16" viewBox="0 0 24 24" fill="var(--primary)" stroke="none">
@@ -34,12 +33,10 @@ const TestimonialsSection = () => {
                 ))}
               </div>
 
-              {/* Quote */}
               <p className="text-sm leading-relaxed text-[var(--foreground)] mb-6">
                 &ldquo;{t.quote}&rdquo;
               </p>
 
-              {/* Author */}
               <div className="flex items-center gap-3 pt-4 border-t border-[var(--border-color)]">
                 <div
                   className="w-10 h-10 rounded-full flex items-center justify-center text-white text-sm font-bold"
