@@ -34,7 +34,7 @@ const HeroSection = () => {
           </p>
 
           <div className="flex flex-wrap gap-4 mt-2">
-            <a href="#pricing" className="btn-primary text-base !py-3.5 !px-8">
+            <a href="/login" className="btn-primary text-base !py-3.5 !px-8">
               Get Started Free
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                 <line x1="5" y1="12" x2="19" y2="12" />

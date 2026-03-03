@@ -43,10 +43,10 @@ const AnalyticsPreviewSection = () => {
           </div>
 
           <div className="p-6 grid grid-cols-1 lg:grid-cols-3 gap-6">
-            <div className="lg:col-span-2 bg-[var(--surface-hover)] rounded-xl p-5">
-              <div className="text-sm font-medium mb-4">Engagement Over Time</div>
+            <div className="lg:col-span-2 bg-[var(--surface-hover)] rounded-xl px-7 py-5">
+              <div className="text-xl font-medium mb-30">Engagement Over Time</div>
               <div className="relative h-48">
-                <svg viewBox="0 0 500 180" className="w-full h-full" preserveAspectRatio="none">
+                <svg viewBox="0 0 500 180" className="w-full h-full mx-1" preserveAspectRatio="none">
                   {[0, 1, 2, 3, 4].map((i) => (
                     <line key={i} x1="0" y1={i * 45} x2="500" y2={i * 45} stroke="var(--border-color)" strokeWidth="1" />
                   ))}
@@ -73,7 +73,7 @@ const AnalyticsPreviewSection = () => {
                     <circle key={i} cx={cx} cy={cy} r="4" fill="var(--primary)" stroke="var(--surface)" strokeWidth="2" />
                   ))}
                 </svg>
-                <div className="absolute left-0 top-0 h-full flex flex-col justify-between text-[10px] text-[var(--muted)] -translate-x-6">
+                <div className="absolute left-3 top-0 h-full flex flex-col justify-between text-[10px] text-[var(--muted)] -translate-x-6">
                   <span>100K</span><span>75K</span><span>50K</span><span>25K</span><span>0</span>
                 </div>
               </div>

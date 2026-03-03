@@ -72,7 +72,7 @@ const Navbar = () => {
             )}
           </button>
 
-          <a href="#pricing" className="btn-primary text-sm !py-2.5 !px-5">
+          <a href="/login" className="btn-primary text-sm !py-2.5 !px-5">
             Start Creating
           </a>
         </div>
