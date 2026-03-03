@@ -20,7 +20,6 @@ const HowItWorksSection = () => {
         </div>
 
         <div className="relative">
-          {/* Connection Line (Desktop) */}
           <div className="hidden lg:block absolute top-[72px] left-[16.67%] right-[16.67%] h-[2px]">
             <div className="w-full h-full" style={{ background: "var(--gradient-primary)", opacity: 0.3 }} />
           </div>
@@ -28,7 +27,6 @@ const HowItWorksSection = () => {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12 relative z-10">
             {steps.map((step, i) => (
               <div key={i} className={`flex flex-col items-center text-center reveal reveal-delay-${i + 1}`}>
-                {/* Step Circle */}
                 <div className="relative mb-6">
                   <div
                     className="w-[88px] h-[88px] rounded-2xl flex items-center justify-center shadow-lg"
@@ -41,7 +39,6 @@ const HowItWorksSection = () => {
                   </div>
                 </div>
 
-                {/* Content */}
                 <h3 className="text-xl font-semibold mb-3">{step.title}</h3>
                 <p className="text-[var(--muted)] text-sm leading-relaxed max-w-xs">
                   {step.description}

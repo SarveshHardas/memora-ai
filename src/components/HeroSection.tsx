@@ -9,14 +9,12 @@ const HeroSection = () => {
       className="relative min-h-screen flex items-center overflow-hidden pt-24"
       style={{ background: "var(--gradient-hero)" }}
     >
-      {/* Background Glow Orbs */}
       <div className="absolute top-20 left-10 w-[500px] h-[500px] rounded-full opacity-30 animate-pulseGlow pointer-events-none"
         style={{ background: "radial-gradient(circle, rgba(79,70,229,0.2), transparent 70%)" }} />
       <div className="absolute bottom-20 right-10 w-[400px] h-[400px] rounded-full opacity-20 animate-pulseGlow pointer-events-none"
         style={{ background: "radial-gradient(circle, rgba(124,58,237,0.2), transparent 70%)", animationDelay: "1.5s" }} />
 
       <div className="max-w-7xl mx-auto px-6 w-full grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-8 items-center relative z-10">
-        {/* Left Content */}
         <div className="flex flex-col gap-6 animate-fadeInUp">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[var(--surface)] border border-[var(--border-color)] w-fit text-sm font-medium text-[var(--muted)]">
             <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
@@ -51,7 +49,6 @@ const HeroSection = () => {
             </button>
           </div>
 
-          {/* Quick Stats */}
           <div className="flex flex-wrap gap-8 mt-6 pt-6 border-t border-[var(--border-color)]">
             {quickStats.map((stat) => (
               <div key={stat.label}>
@@ -62,10 +59,8 @@ const HeroSection = () => {
           </div>
         </div>
 
-        {/* Right - Robot Image */}
         <div className="relative flex items-center justify-center animate-fadeInUp" style={{ animationDelay: "0.3s" }}>
           <div className="relative animate-float">
-            {/* Glow behind robot */}
             <div className="absolute inset-0 rounded-full opacity-40 blur-3xl"
               style={{ background: "var(--gradient-primary)" }} />
             <Image
@@ -78,7 +73,6 @@ const HeroSection = () => {
             />
           </div>
 
-          {/* Floating UI Panels */}
           <div className="absolute top-8 right-0 glass rounded-xl px-4 py-3 animate-floatSlow hidden lg:block"
             style={{ animationDelay: "0.5s" }}>
             <div className="flex items-center gap-2 text-sm font-medium text-[var(--foreground)]">
@@ -97,7 +91,6 @@ const HeroSection = () => {
         </div>
       </div>
 
-      {/* Bottom Gradient Fade */}
       <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[var(--background)] to-transparent pointer-events-none" />
     </section>
   );

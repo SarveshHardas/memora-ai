@@ -17,14 +17,12 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled
           ? "glass shadow-lg py-3"
           : "bg-transparent py-5"
-      }`}
+        }`}
     >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
-        {/* Logo */}
         <a href="#" className="flex items-center gap-2 group">
           <div className="w-8 h-8 rounded-lg bg-[var(--gradient-primary)] flex items-center justify-center"
             style={{ background: "var(--gradient-primary)" }}>
@@ -37,7 +35,6 @@ const Navbar = () => {
           </span>
         </a>
 
-        {/* Desktop Links */}
         <div className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
             <a
@@ -50,9 +47,7 @@ const Navbar = () => {
           ))}
         </div>
 
-        {/* Right side */}
         <div className="hidden md:flex items-center gap-4">
-          {/* Theme Toggle */}
           <button
             onClick={toggleTheme}
             className="relative w-10 h-10 rounded-xl flex items-center justify-center bg-[var(--surface)] border border-[var(--border-color)] hover:border-[var(--primary)] transition-all duration-200 cursor-pointer"
@@ -82,7 +77,6 @@ const Navbar = () => {
           </a>
         </div>
 
-        {/* Mobile Hamburger */}
         <div className="flex md:hidden items-center gap-3">
           <button
             onClick={toggleTheme}
@@ -107,11 +101,9 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Mobile Menu */}
       <div
-        className={`md:hidden overflow-hidden transition-all duration-300 ${
-          mobileOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
-        }`}
+        className={`md:hidden overflow-hidden transition-all duration-300 ${mobileOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+          }`}
       >
         <div className="px-6 pt-4 pb-6 flex flex-col gap-4 glass mt-2 mx-4 rounded-2xl">
           {navLinks.map((link) => (

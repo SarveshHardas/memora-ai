@@ -16,7 +16,6 @@ import Footer from "@/components/Footer";
 
 const LandingPage = () => {
   useEffect(() => {
-    // Small delay to ensure all DOM elements are mounted
     const timer = setTimeout(() => {
       const observer = new IntersectionObserver(
         (entries) => {
@@ -35,7 +34,6 @@ const LandingPage = () => {
       const revealElements = document.querySelectorAll(".reveal");
       revealElements.forEach((el) => observer.observe(el));
 
-      // Cleanup
       return () => observer.disconnect();
     }, 100);
 
