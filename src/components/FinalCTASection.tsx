@@ -18,16 +18,16 @@ const FinalCTASection = () => {
           Join thousands of creators who use Memora AI to turn their content into a growth engine powered by data, not luck.
         </p>
         <div className="flex flex-wrap justify-center gap-4">
-          <a href="#pricing" className="btn-primary text-base !py-4 !px-10">
+          <a href="/login" className="btn-primary text-base !py-4 !px-10">
             Launch Memora AI
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
               <line x1="5" y1="12" x2="19" y2="12" />
               <polyline points="12 5 19 12 12 19" />
             </svg>
           </a>
-          <button className="btn-secondary text-base !py-4 !px-10">
+          <a href="#pricing" className="btn-secondary text-base !py-4 !px-10">
             Talk to Sales
-          </button>
+          </a>
         </div>
         <p className="text-sm text-[var(--muted)] mt-6">
           No credit card required • Free plan available • Cancel anytime

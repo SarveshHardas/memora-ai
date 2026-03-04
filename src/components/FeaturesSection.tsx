@@ -15,30 +15,34 @@ const FeaturesSection = () => {
             <span className="gradient-text">Go Viral</span>
           </h2>
           <p className="text-lg text-[var(--muted)] max-w-2xl mx-auto">
-            Six powerful AI-driven tools working together to help you create, optimize, and scale content that wins.
+            Six powerful AI-driven tools working together to help you create,
+            optimize, and scale content that wins.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {features.map((feature, i) => (
-            <div
-              key={i}
-              className={`card group cursor-default reveal reveal-delay-${(i % 3) + 1}`}
-            >
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-[260px]">
+          {features.map((feature, i) => {
+            const isLarge = i === 0;
+
+            return (
               <div
-                className="w-12 h-12 rounded-xl flex items-center justify-center mb-5 transition-transform duration-300 group-hover:scale-110"
-                style={{ background: "var(--gradient-primary)" }}
+                key={i}
+                className={`glass card min-h-60 flex flex-col gap-5 p-8 ${
+                  isLarge ? "justify-between" : "justify-start"
+                } ${feature.span}`}
               >
-                {feature.icon}
+                <div className="w-12 h-12 rounded-xl flex items-center justify-center">
+                  {feature.icon}
+                </div>
+
+                <h3 className="text-lg font-semibold">{feature.title}</h3>
+
+                <p className="text-[var(--muted)] text-sm leading-relaxed max-w-[55ch]">
+                  {feature.description}
+                </p>
               </div>
-              <h3 className="text-lg font-semibold mb-3 group-hover:text-[var(--primary)] transition-colors duration-200">
-                {feature.title}
-              </h3>
-              <p className="text-[var(--muted)] text-sm leading-relaxed">
-                {feature.description}
-              </p>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>
