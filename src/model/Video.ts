@@ -5,7 +5,7 @@ export interface Video extends Document {
     title: string;
     description: string;
     duration: number;
-    status: 'ingested' | 'transcribing' | 'indexed' | 'failed';
+    status: 'ready' | 'processing' | 'failed';
     createdAt: Date;
     updatedAt: Date;
 }
@@ -15,7 +15,7 @@ export const VideoSchema : Schema<Video> = new Schema({
     title: { type: String, required: true },
     description: { type: String, required: true },
     duration: { type: Number, required: true },
-    status: { type: String, enum: ['ingested', 'transcribing', 'indexed', 'failed'], default: 'ingested' }
+    status: { type: String, enum: ['ready', 'processing', 'failed'], default: 'processing' }
 },{ timestamps: true });
 
 const VideoModel = (mongoose.models.Video as mongoose.Model<Video>) || mongoose.model<Video>('Video', VideoSchema);
