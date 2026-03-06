@@ -107,7 +107,7 @@ export default function LoginContent() {
                         </p>
 
                         <button
-                            onClick={() => signIn("google", { callbackUrl: "/" })}
+                            onClick={() => signIn("google", { callbackUrl: "/dashboard" })}
                             className="w-full flex items-center justify-center gap-3 py-3.5 px-6 rounded-xl font-semibold text-sm transition-all duration-200 hover:-translate-y-0.5 cursor-pointer bg-[var(--surface)] border border-[var(--border-color)] hover:border-[var(--primary)] hover:shadow-lg text-[var(--foreground)]"
                         >
                             <svg width="20" height="20" viewBox="0 0 24 24">
