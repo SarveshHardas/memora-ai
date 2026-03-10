@@ -1,5 +1,5 @@
 "use client";
-import LoginContent from "@/pages/LoginContent";
+import LoginContent from "@/views/LoginContent";
 import { ThemeProvider } from "@/components/ThemeProvider";
 
 export default function LoginPage() {
