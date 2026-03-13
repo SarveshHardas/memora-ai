@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "Memory Lane Snapshot",
+  "version": "1.1",
+  "description": "Track and record social media browsing with a smart timer.",
+  "permissions": [
+    "tabs",
+    "activeTab",
+    "storage",
+    "notifications",
+    "scripting",
+    "webNavigation"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup/popup.html"
+  },
+  "host_permissions": ["<all_urls>"]
+}

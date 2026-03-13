@@ -9,8 +9,6 @@ import ProblemSection from "@/components/ProblemSection";
 import FeaturesSection from "@/components/FeaturesSection";
 import HowItWorksSection from "@/components/HowItWorksSection";
 import AnalyticsPreviewSection from "@/components/AnalyticsPreviewSection";
-import TestimonialsSection from "@/components/TestimonialsSection";
-import PricingSection from "@/components/PricingSection";
 import FinalCTASection from "@/components/FinalCTASection";
 import Footer from "@/components/Footer";
 
@@ -51,8 +49,6 @@ const LandingPage = () => {
           <FeaturesSection />
           <HowItWorksSection />
           <AnalyticsPreviewSection />
-          <TestimonialsSection />
-          <PricingSection />
           <FinalCTASection />
         </main>
         <Footer />
