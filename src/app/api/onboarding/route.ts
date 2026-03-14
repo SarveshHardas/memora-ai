@@ -1,7 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { auth } from "@/auth";
 import connectDB from "@/lib/dbConnect";
-import Account from "@/model/Accounts";
 import videoIngestion from "@/lib/videoIngestion";
 import YTChannelModel from "@/model/YTChannel";
 import { getVideos } from "@/lib/getVideos";
