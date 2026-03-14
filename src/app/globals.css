@@ -297,3 +297,27 @@ html.theme-transition *::after {
 ::-webkit-scrollbar-thumb:hover {
   background: var(--primary);
 }
+
+/* ──────── CLIPS SIDEBAR ──────── */
+.clips-sidebar {
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: var(--border-color) transparent;
+}
+
+.clips-sidebar::-webkit-scrollbar {
+  width: 4px;
+}
+
+.clips-sidebar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.clips-sidebar::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 4px;
+}
+
+.clips-sidebar::-webkit-scrollbar-thumb:hover {
+  background: var(--primary);
+}
