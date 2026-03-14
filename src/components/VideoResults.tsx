@@ -207,6 +207,9 @@ export default function VideoResults({
                                     year: "numeric",
                                 })}
                             </div>
+                            <div className="flex justify-end">
+                                <a href="/generate-clips" className="p-3! bg-[var(--primary)] text-[var(--primary-foreground)] rounded-lg">Generate Clips</a>
+                            </div>
                         </div>
                     </div>
                 ))}
