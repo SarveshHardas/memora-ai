@@ -198,6 +198,73 @@ export default function Dashboard() {
                     />
                 </div>
 
+                {/* AI Tools navigation */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-10">
+                    <div
+                        onClick={() => router.push("/generate?tab=thumbnail")}
+                        className="card !rounded-2xl !p-6 group cursor-pointer hover:!border-[var(--primary)]"
+                    >
+                        <div className="flex items-start gap-4">
+                            <div
+                                className="w-12 h-12 rounded-xl flex items-center justify-center shrink-0 shadow-lg group-hover:scale-110 transition-transform duration-300"
+                                style={{ background: "var(--gradient-primary)" }}
+                            >
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
+                                    <circle cx="8.5" cy="8.5" r="1.5" />
+                                    <polyline points="21 15 16 10 5 21" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 className="text-base font-bold mb-1">
+                                    Thumbnail <span className="gradient-text">Generator</span>
+                                </h3>
+                                <p className="text-xs text-[var(--muted)] leading-relaxed">
+                                    Create eye-catching thumbnails with AI using text prompts and reference images
+                                </p>
+                            </div>
+                        </div>
+                        <div className="mt-4 flex items-center gap-1.5 text-xs font-medium text-[var(--primary)] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            Get started
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                                <line x1="5" y1="12" x2="19" y2="12" />
+                                <polyline points="12 5 19 12 12 19" />
+                            </svg>
+                        </div>
+                    </div>
+
+                    <div
+                        onClick={() => router.push("/generate?tab=caption")}
+                        className="card !rounded-2xl !p-6 group cursor-pointer hover:!border-[var(--secondary)]"
+                    >
+                        <div className="flex items-start gap-4">
+                            <div
+                                className="w-12 h-12 rounded-xl flex items-center justify-center shrink-0 shadow-lg group-hover:scale-110 transition-transform duration-300"
+                                style={{ background: "linear-gradient(135deg, #7c3aed, #c084fc)" }}
+                            >
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 className="text-base font-bold mb-1">
+                                    Caption <span style={{ background: "linear-gradient(135deg, #7c3aed, #c084fc)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>Generator</span>
+                                </h3>
+                                <p className="text-xs text-[var(--muted)] leading-relaxed">
+                                    Generate viral captions tailored for any platform and tone
+                                </p>
+                            </div>
+                        </div>
+                        <div className="mt-4 flex items-center gap-1.5 text-xs font-medium text-[var(--secondary)] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            Get started
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                                <line x1="5" y1="12" x2="19" y2="12" />
+                                <polyline points="12 5 19 12 12 19" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
                 {/* Stats cards (bottom) */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-12">
                     <div className="card !rounded-xl !p-6 text-center group hover:!border-[var(--primary)]">
