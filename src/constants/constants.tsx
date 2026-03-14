@@ -2,8 +2,7 @@ export const navLinks = [
   { label: "Features", href: "#features" },
   { label: "How It Works", href: "#how-it-works" },
   { label: "Analytics", href: "#analytics" },
-  { label: "Pricing", href: "#pricing" },
-  { label: "Testimonials", href: "#testimonials" },
+  { label: "User Archieve", href: "#user-archieve" },
 ];
 
 export const quickStats = [
@@ -248,7 +247,33 @@ export const features = [
     title: "Smart Hook Detection",
     description:
       "Detects powerful openings that increase watch time and keep viewers hooked from the first second.",
-    span: "lg:col-span-1 lg:row-span-2",
+    span: "lg:col-span-1 lg:row-span-1",
+  },
+
+  {
+    icon: (
+      <svg
+        width="28"
+        height="28"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="brown"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      >
+        <path d="M3 3v18h18" />
+        <path d="M7 14l3-3 3 2 4-5" />
+        <circle cx="7" cy="14" r="1" />
+        <circle cx="10" cy="11" r="1" />
+        <circle cx="13" cy="13" r="1" />
+        <circle cx="17" cy="8" r="1" />
+      </svg>
+    ),
+    title: "User Activity Tracking & Summary",
+    description:
+      "Tracks browser activity when enabled, analyzes visited pages and actions, and generates a concise summary of the user's browsing behavior.",
+    span: "lg:col-span-2 lg:row-span-1",
   },
   {
     icon: (
@@ -270,7 +295,7 @@ export const features = [
     title: "Multi-Platform Optimization",
     description:
       "Formats clips automatically for Reels, Shorts, TikTok, and more — all in one click.",
-    span: "lg:col-span-2 lg:row-span-1",
+    span: "lg:col-span-1 lg:row-span-1",
   },
 ];
 
