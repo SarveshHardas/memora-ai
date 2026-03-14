@@ -14,7 +14,7 @@ const FeaturesSection = () => {
             Everything You Need to{" "}
             <span className="gradient-text">Go Viral</span>
           </h2>
-          <p className="text-lg text-[var(--muted)] max-w-2xl mx-auto">
+          <p className="text-lg text-muted max-w-2xl mx-auto">
             Six powerful AI-driven tools working together to help you create,
             optimize, and scale content that wins.
           </p>
@@ -37,7 +37,7 @@ const FeaturesSection = () => {
 
                 <h3 className="text-lg font-semibold">{feature.title}</h3>
 
-                <p className="text-[var(--muted)] text-sm leading-relaxed max-w-[55ch]">
+                <p className="text-muted text-sm leading-relaxed max-w-[55ch]">
                   {feature.description}
                 </p>
               </div>
