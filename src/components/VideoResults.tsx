@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+
 export interface VideoResult {
     _id: string;
     title: string;
@@ -126,10 +128,12 @@ export default function VideoResults({
                     >
                         {/* Thumbnail */}
                         <div className="relative h-40 bg-[var(--surface-hover)] overflow-hidden">
-                            <img
+                            <Image
                                 src={video.thumbnailUrl}
                                 alt={video.title}
                                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                                width={64}
+                                height={64}
                                 onError={(e) => {
                                     (e.target as HTMLImageElement).style.display = "none";
                                 }}
