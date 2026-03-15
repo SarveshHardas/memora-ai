@@ -99,61 +99,61 @@ function ViralClipExtractorInner() {
     const [error, setError] = useState<string | null>(null);
     const inputRef = useRef<HTMLInputElement>(null);
 
-    // const handleExtract = useCallback(async () => {
-    //     if (!videoUrl.trim()) return;
-    //     setIsExtracting(true);
-    //     setError(null);
-    //     setResult(null);
-    //     setSelectedClip(null);
-
-    //     try {
-    //         await new Promise((resolve) => setTimeout(resolve, 2200));
-    //         const mockResult = getMockResult(videoUrl);
-    //         setResult(mockResult);
-    //         if (mockResult.clips.length > 0) {
-    //             setSelectedClip(mockResult.clips[0]);
-    //         }
-    //     } catch {
-    //         setError("Failed to extract video. Please check the URL and try again.");
-    //     } finally {
-    //         setIsExtracting(false);
-    //     }
-    // }, [videoUrl]);
-
     const handleExtract = useCallback(async () => {
         if (!videoUrl.trim()) return;
-
         setIsExtracting(true);
         setError(null);
         setResult(null);
         setSelectedClip(null);
 
         try {
-            const res = await fetch("/api/extract-clips", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                },
-                body: JSON.stringify({ url: videoUrl }),
-            });
-
-            const data = await res.json();
-
-            if (!res.ok) {
-                throw new Error(data.error || "Extraction failed");
+            await new Promise((resolve) => setTimeout(resolve, 2200));
+            const mockResult = getMockResult(videoUrl);
+            setResult(mockResult);
+            if (mockResult.clips.length > 0) {
+                setSelectedClip(mockResult.clips[0]);
             }
-
-            setResult(data);
-
-            if (data.clips?.length > 0) {
-                setSelectedClip(data.clips[0]);
-            }
-        } catch (err: any) {
-            setError(err.message || "Failed to extract video");
+        } catch {
+            setError("Failed to extract video. Please check the URL and try again.");
         } finally {
             setIsExtracting(false);
         }
     }, [videoUrl]);
+
+    // const handleExtract = useCallback(async () => {
+    //     if (!videoUrl.trim()) return;
+
+    //     setIsExtracting(true);
+    //     setError(null);
+    //     setResult(null);
+    //     setSelectedClip(null);
+
+    //     try {
+    //         const res = await fetch("/api/extract-clips", {
+    //             method: "POST",
+    //             headers: {
+    //                 "Content-Type": "application/json",
+    //             },
+    //             body: JSON.stringify({ url: videoUrl }),
+    //         });
+
+    //         const data = await res.json();
+
+    //         if (!res.ok) {
+    //             throw new Error(data.error || "Extraction failed");
+    //         }
+
+    //         setResult(data);
+
+    //         if (data.clips?.length > 0) {
+    //             setSelectedClip(data.clips[0]);
+    //         }
+    //     } catch (err: any) {
+    //         setError(err.message || "Failed to extract video");
+    //     } finally {
+    //         setIsExtracting(false);
+    //     }
+    // }, [videoUrl]);
 
     const handleClipSelect = useCallback((clip: ExtractedClip) => {
         setSelectedClip(clip);
