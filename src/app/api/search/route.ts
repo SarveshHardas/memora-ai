@@ -26,7 +26,7 @@ export async function POST(req: NextRequest) {
         });
         const results = await response.json();
 
-        return NextResponse.json({ results });
+        return NextResponse.json({ results: results.results });
     } catch (error) {
         console.error("Search error:", error);
         return NextResponse.json(
