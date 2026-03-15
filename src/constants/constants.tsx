@@ -5,6 +5,29 @@ export const navLinks = [
   { label: "User Archieve", href: "#user-archieve" },
 ];
 
+export const drawerLinks = [
+  {
+    label: "Dashboard",
+    href: "/dashboard",
+  },
+  {
+    label: "Video Editor",
+    href: "/videoEditor",
+  },
+  {
+    label: "Thumbnail Generation",
+    href: "/generate?tab=thumbnail",
+  },
+  {
+    label: "Caption Generation",
+    href: "/generate?tab=caption",
+  },
+  {
+    label: "Viral Clip Extractor",
+    href: "/clipExtractor",
+  },
+];
+
 export const quickStats = [
   { value: "10K+", label: "Creators" },
   { value: "2M+", label: "Clips Generated" },
